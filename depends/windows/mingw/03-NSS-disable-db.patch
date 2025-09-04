@@ -1,0 +1,12 @@
+--- a/etc/nsswitch.conf
++++ b/etc/nsswitch.conf
+@@ -1,7 +1,7 @@
+ # Begin /etc/nsswitch.conf
+ 
+-passwd: files db
+-group: files db
++passwd: files
++group: files
+ 
+ db_enum: cache builtin
+ 
