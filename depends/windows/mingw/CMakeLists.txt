@@ -27,16 +27,10 @@ execute_process(COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/usr/bin/bash.exe -lc
     "pacman --noconfirm -Syuu")
 execute_process(COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/usr/bin/bash.exe -lc
     "pacman --noconfirm -Syuu \
-                           mingw-w64-cross-binutils \
-                           ${HOST}-gcc ${HOST}-lua \
-                           ${HOST}-headers \
+                           gcc \
                            make \
-                           autoconf \
-                           automake \
-                           libtool \
                            pkg-config \
                            nasm \
-                           yasm \
                            patch")
 
 file(GLOB_RECURSE shared_libs ${CMAKE_CURRENT_SOURCE_DIR}/${MINGW_PATH}/*.dll.a)
