@@ -226,7 +226,7 @@ else()
   externalproject_add(ffmpeg
                       SOURCE_DIR ${CMAKE_SOURCE_DIR}
                       CONFIGURE_COMMAND ${MINGW_CALL}
-                        ./configure
+                        time ./configure
                           --prefix=[DQ]${CMAKE_INSTALL_PREFIX}[DQ]
                           --arch=${EXTRA_ARCH}
                           --toolchain=msvc
